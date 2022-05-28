@@ -1,20 +1,20 @@
 Read the formatted version of this ReadMe at https://docs.google.com/document/d/1L_3ZMcGEXN3tDfOCQco7aegHMwBmJlZgW2fFFcPyUPY/edit?usp=sharing
 
-Maxwell Acha, Gary Whitney, David Griliopoulos
-Birmingham University Data Analytics Bootcamp
-Project 2 Report:
+<h1>Maxwell Acha, Gary Whitney, David Griliopoulos</h1>
+<h1>Birmingham University Data Analytics Bootcamp</h1>
+<h1>Project 2 Report:</h1>
 
-Abstract
+<h2>Abstract</h2>
 Our team decided that we would compile different data sources on the countries of the world, so that a user could perhaps use this to investigate any statistical connections. We decided to use different countries’ ‘World Happiness Report Rankings’ and Population Density.
 
-Extract
+<h2>Extract</h2>
 We extracted the data in different formats from two different sources:
 A .csv regarding the ‘happiness score’ of various countries
 https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2022.csv
 An html table of population density https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population_density 
 These were both converted into Pandas DataFrames by pd.read_csv and pd.read_html respectively.
 
-Transform
+<h2>Transform</h2>
 There was substantial cleaning and reduction that needed to be done to these two dataframes in order to make them fit together.
 
 Both dataframes have a ‘Country’ column, however in both dataframes some countries were followed by an asterix (‘*’). This, and any following text (some countries had an extra note in brackets afterwards), was removed by reading the countries, stripping off the unnecessary characters by partitioning on them, and then writing that clean country name to a new list. This list was then concatenated with the relevant numerical data from the original dataframe to make a new clean dataframes; columns were then renamed to match the names in the SQL tables.
@@ -25,7 +25,7 @@ The happiness dataframe has many more rows than was necessary for our data, all 
 
 We dropped the Happiness score itself as it was recorded as a formatted string (e.g. “7.587”) not an integer. We could have converted the string to an integer, but we felt that the rank was more of an important measure because it gave more context than the happiness score alone.
 
-Load
+<h2>Load</h2>
 We created a database in PostgreSQL to contain the data, called ‘happy_density’, and inside created two tables that with columns that matched the dataframes:
 create table happiness( country text primary key, happiness_rank int );
 create table pop_dense( country text primary key, p_dense int );
