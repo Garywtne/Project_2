@@ -1,6 +1,6 @@
 Read the formatted version of this ReadMe at https://docs.google.com/document/d/1L_3ZMcGEXN3tDfOCQco7aegHMwBmJlZgW2fFFcPyUPY/edit?usp=sharing
 
-Maxwell Acha, Gary [], David Griliopoulos
+Maxwell Acha, Gary Whitney, David Griliopoulos
 Birmingham University Data Analytics Bootcamp
 Project 2 Report:
 
